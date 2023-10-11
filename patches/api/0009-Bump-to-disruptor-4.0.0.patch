@@ -1,0 +1,19 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Dreeam <61569423+Dreeam-qwq@users.noreply.github.com>
+Date: Tue, 10 Oct 2023 08:03:08 -0400
+Subject: [PATCH] Bump to disruptor 4.0.0
+
+
+diff --git a/build.gradle.kts b/build.gradle.kts
+index f6f8fc879d938d31b184216eaccb477637be5a13..1ab6dd5517a5733be7af641c5f41446e8ab6cb9b 100644
+--- a/build.gradle.kts
++++ b/build.gradle.kts
+@@ -12,7 +12,7 @@ val annotationsVersion = "24.0.1"
+ val bungeeCordChatVersion = "1.20-R0.1"
+ val adventureVersion = "4.14.0"
+ val slf4jVersion = "2.0.9" // Leaf - Bump Dependencies
+-val log4jVersion = "2.20.0" // Leaf - Bump Dependencies
++val log4jVersion = "2.21.0-SNAPSHOT" // Leaf - Bump Dependencies // Leaf - Bump to disruptor 4.0.0
+ val apiAndDocs: Configuration by configurations.creating {
+     attributes {
+         attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category.DOCUMENTATION))

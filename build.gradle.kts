@@ -42,6 +42,7 @@ subprojects {
     }
 
     repositories {
+        mavenLocal()
         mavenCentral()
         maven(paperMavenPublicUrl)
         maven("https://oss.sonatype.org/content/groups/public/")

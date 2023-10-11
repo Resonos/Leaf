@@ -1,0 +1,36 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Dreeam <61569423+Dreeam-qwq@users.noreply.github.com>
+Date: Tue, 10 Oct 2023 08:04:56 -0400
+Subject: [PATCH] Bump to disruptor 4.0.0
+
+
+diff --git a/build.gradle.kts b/build.gradle.kts
+index fa745abebf14fee0ca56cadc98822be62b647edf..7a8985bbfd7d51589f0b0430f333cd4a460cf2e0 100644
+--- a/build.gradle.kts
++++ b/build.gradle.kts
+@@ -33,13 +33,13 @@ dependencies {
+           Scanning takes about 1-2 seconds so adding this speeds up the server start.
+      */
+     // Leaf start - Bump Dependencies
+-    implementation("org.apache.logging.log4j:log4j-core:2.20.0") // Paper - implementation
+-    log4jPlugins.annotationProcessorConfigurationName("org.apache.logging.log4j:log4j-core:2.20.0") // Paper - Needed to generate meta for our Log4j plugins
++    implementation("org.apache.logging.log4j:log4j-core:2.21.0-SNAPSHOT") // Paper - implementation // Leaf - Bump to disruptor 4.0.0
++    log4jPlugins.annotationProcessorConfigurationName("org.apache.logging.log4j:log4j-core:2.21.0-SNAPSHOT") // Paper - Needed to generate meta for our Log4j plugins // Leaf - Bump to disruptor 4.0.0
+     runtimeOnly(log4jPlugins.output)
+     alsoShade(log4jPlugins.output)
+     implementation("io.netty:netty-codec-haproxy:4.1.99.Final") // Paper - Add support for proxy protocol
+     // Paper end
+-    implementation("org.apache.logging.log4j:log4j-iostreams:2.20.0") // Paper - remove exclusion
++    implementation("org.apache.logging.log4j:log4j-iostreams:2.21.0-SNAPSHOT") // Paper - remove exclusion // Leaf - Bump to disruptor 4.0.0
+     implementation("org.ow2.asm:asm:9.6")
+     implementation("org.ow2.asm:asm-commons:9.6") // Paper - ASM event executor generation
+     testImplementation("org.mockito:mockito-core:5.6.0") // Paper - switch to mockito
+@@ -48,7 +48,7 @@ dependencies {
+     implementation("net.fabricmc:mapping-io:0.5.0-beta.1") // Paper - needed to read mappings for stacktrace deobfuscation
+     runtimeOnly("org.xerial:sqlite-jdbc:3.43.0.0")
+     runtimeOnly("com.mysql:mysql-connector-j:8.1.0")
+-    runtimeOnly("com.lmax:disruptor:3.4.4") // Paper // Leaf - Bump Dependencies - Waiting Log4j support disruptor 4.0.0
++    runtimeOnly("com.lmax:disruptor:4.0.0") // Paper // Leaf - Bump Dependencies - Waiting Log4j support disruptor 4.0.0 // Leaf - Bump to disruptor 4.0.0
+     // Leaf end
+     // Paper start - Use Velocity cipher
+     implementation("com.velocitypowered:velocity-native:3.2.0-SNAPSHOT") { // Leaf - Bump Dependencies
